@@ -8,12 +8,12 @@ import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
-    ItemsModule,
     MongooseModule.forRoot('mongodb://127.0.0.1:27017/nest'),
+    ItemsModule,
     AuthModule,
     UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}
